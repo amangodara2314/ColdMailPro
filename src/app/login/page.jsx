@@ -59,7 +59,7 @@ const Login = () => {
                 className="rounded"
               />
               <p className="text-center mt-2 text-sm">
-                Step 3: Search for "App Passwords".
+                Step 3: Search for &quot;App Passwords&quot;.
               </p>
             </div>
           </div>
@@ -72,7 +72,7 @@ const Login = () => {
               className="rounded"
             />
             <p className="text-center mt-2 text-sm">
-              Step 4: Create a new app password for "cold_email".
+              Step 4: Create a new app password for &quot;cold_email&quot;.
             </p>
           </div>
           <div className="flex flex-col items-center pt-2">
