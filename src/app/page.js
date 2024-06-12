@@ -23,19 +23,19 @@ const Home = () => {
     console.log(emailData);
     setData(emailData);
   };
+  const processMessage = (input, name) => {
+    const regex = /\b(Hi|hi)\b/g;
+    const cleanedMessage = input.replace(regex, (match) => `${match} ${name}`);
+    return cleanedMessage;
+  };
 
   const sendEmails = async () => {
     setIsLoading(true);
     const user = JSON.parse(localStorage.getItem("cold-user"));
     for (let entry of data) {
-      const hiIndex = message.toLowerCase().indexOf("hi");
-
-      let updatedMessage = message;
-      if (hiIndex !== -1) {
-        updatedMessage = `${message.slice(0, hiIndex + 2)} ${
-          entry.name
-        }${message.slice(hiIndex + 2)}`;
-      }
+      let updatedMessage = processMessage(message, entry.name);
+      console.log(updatedMessage);
+      return;
       if (entry.name == undefined || entry.email == undefined) {
         continue;
       }
