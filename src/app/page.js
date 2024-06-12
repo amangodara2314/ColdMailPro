@@ -34,8 +34,6 @@ const Home = () => {
     const user = JSON.parse(localStorage.getItem("cold-user"));
     for (let entry of data) {
       let updatedMessage = processMessage(message, entry.name);
-      console.log(updatedMessage);
-      return;
       if (entry.name == undefined || entry.email == undefined) {
         continue;
       }
