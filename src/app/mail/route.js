@@ -25,7 +25,7 @@ export async function POST(req) {
       to: email,
       subject: subject,
       text: message,
-      html: `<p>${message}</p>`,
+      html: `<div style="font-family: monospace;"><pre>${message}</pre></div>`,
     });
 
     return Response.json({ message: "Email sent successfully" });
